@@ -15,7 +15,10 @@
     </nav>
     <!-- main content/big picture or logo -->
     <section class="jumbotron">
-      <div>THIS IS JUMBOTRON</div>
+      <div>
+        THIS IS JUMBOTRON
+        <h1 class="text-3xl font-bold underline text-clifford">Hello world!</h1>
+      </div>
     </section>
 
     <!-- api call for mix and match 5 recipe with 5 wine -->
@@ -29,5 +32,18 @@
     <!-- adding footer -->
     <footer class="footer">FOOTER!</footer>
     <script src="./assets/js/script.js"></script>
+    <!-- TailWind CSS CDN! -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#c73439",
+            },
+          },
+        },
+      };
+    </script>
   </body>
 </html>
