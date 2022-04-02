@@ -21,3 +21,6 @@
 .footer {
   font-size: 100px;
 }
+.input-search {
+  animation: move 6s ease-in-out infinite alternate;
+} */

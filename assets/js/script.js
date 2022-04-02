@@ -8,7 +8,8 @@ var cockTailUrl = "https://the-cocktail-db.p.rapidapi.com/random.php";
 var yumlyUrl = "https://yummly2.p.rapidapi.com/categories/list";
 var MealsUrl = "https://themealdb.p.rapidapi.com/latest.php";
 
-var vodkaLinkEl = document.querySelector("#vodka");
+// get element by ID for each link in NAVBAR
+var drinksList = document.querySelector(".drinks-list");
 
 // // API CALL 1 COCKTAILDB
 // const cockTails = {
@@ -53,3 +54,16 @@ var vodkaLinkEl = document.querySelector("#vodka");
 //   .then((response) => console.log(response))
 //   .catch((err) => console.error(err));
 //functions
+drinksList.addEventListener("click", function (event) {
+  if (event.target && event.target.innerHTML === "Vodka") {
+    console.log("CLICKED VODKA");
+  } else if (event.target && event.target.innerHTML === "Gin") {
+    console.log("CLICKED GIN");
+  } else if (event.target && event.target.innerHTML === "Rum") {
+    console.log("Clicked RUM");
+  } else if (event.target && event.target.innerHTML === "Whiskey") {
+    console.log("clicked Whiskey");
+  } else if (event.target && event.target.innerHTML === "NonAlcoholic") {
+    console.log("NO ALCOHOL");
+  }
+});
