@@ -1,13 +1,18 @@
+:root {
+  --muskyBlue: #08243b;
+  --muskyTeal: #56777c;
+  --muskyTan: #f2c999;
+  --muskyOrange: #c79360;
+  --muskyBrown: #75574e;
+}
 * {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
 }
-.navbar {
-  font-size: 50px;
-}
-.jumbotron {
+
+/* .jumbotron {
   font-size: 40px;
 }
 .mixNMatch {
@@ -15,7 +20,4 @@
 }
 .footer {
   font-size: 100px;
-}
-.nav-links {
-  list-style: none;
 }

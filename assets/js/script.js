@@ -53,7 +53,3 @@ var vodkaLinkEl = document.querySelector("#vodka");
 //   .then((response) => console.log(response))
 //   .catch((err) => console.error(err));
 //functions
-
-vodkaLinkEl.addEventListener("click", function () {
-  //make current screen disappear
-});
