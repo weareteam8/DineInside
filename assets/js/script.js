@@ -45,7 +45,41 @@ var randomMealIngredientsEl = document.getElementById("ingredients");
 
 // // API CALL 3 TheMealDB
 
-//
+// const randomMealFetch = {
+//   method: "GET",
+//   headers: {
+//     "X-RapidAPI-Host": "themealdb.p.rapidapi.com",
+//     "X-RapidAPI-Key": "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+//   },
+// };
+
+// fetch("https://themealdb.p.rapidapi.com/random.php", randomMealFetch)
+//   .then((response) => response.json())
+//   .then(function (data) {
+//     console.log(data.meals[0].strMeal) +
+//       randomMealImg.setAttribute("src", data.meals[0].strMealThumb) +
+//       (randomMealTitleEl.innerHTML = data.meals[0].strMeal);
+//     var mealIngredients = Object.keys(data.meals[0])
+//       .filter((k) => k.startsWith("strIngredient"))
+//       .map((v) => data.meals[0][v]);
+
+//     var mealMeasurements = Object.keys(data.meals[0])
+//       .filter((k) => k.startsWith("strMeasure"))
+//       .map((m) => data.meals[0][m]);
+
+//     console.log(mealMeasurements);
+//     for (let i = 0; i < mealIngredients.length; i++) {
+//       randomMealIngredientsEl.innerHTML +=
+//         " " + mealMeasurements[i] + " " + mealIngredients[i];
+//       //if ingredient or measurement is null. stop looping, no more ingredients
+//       if (mealIngredients[i] === null || mealMeasurements[i] === null) {
+//         break;
+//       }
+//     }
+//   })
+//   .catch((err) =>
+//     console.error(err + "Error in fetching meal.  randomMealFetch")
+//   );
 
 //functions
 drinksList.addEventListener("click", function (event) {
