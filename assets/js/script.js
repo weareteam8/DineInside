@@ -10,7 +10,9 @@ var MealsUrl = "https://themealdb.p.rapidapi.com/latest.php";
 
 // get element by ID for PARENT
 var drinksList = document.querySelector(".drinks-list");
-var randomMeal = document.getElementById("RandomMealImg");
+var randomMealImg = document.getElementById("RandomMealImg");
+var randomMealTitleEl = document.getElementById("featuredMealTitle");
+var randomMealIngredientsEl = document.getElementById("ingredients");
 
 // // API CALL 1 COCKTAILDB
 // const cockTails = {
@@ -42,7 +44,8 @@ var randomMeal = document.getElementById("RandomMealImg");
 //   .catch((err) => console.error(err));
 
 // // API CALL 3 TheMealDB
-const Meals = {
+
+const randomMealFetch = {
   method: "GET",
   headers: {
     "X-RapidAPI-Host": "themealdb.p.rapidapi.com",
@@ -50,14 +53,23 @@ const Meals = {
   },
 };
 
-fetch(MealsUrl, Meals)
+fetch("https://themealdb.p.rapidapi.com/random.php", randomMealFetch)
   .then((response) => response.json())
-  .then(
-    (response) =>
-      console.log(response.meals[0].strMealThumb) +
-      randomMeal.setAttribute("src", response.meals[4].strMealThumb)
-  )
-  .catch((err) => console.error(err));
+  .then(function (data) {
+    console.log(data.meals[0].strMeal) +
+      randomMealImg.setAttribute("src", data.meals[0].strMealThumb) +
+      (randomMealTitleEl.innerHTML = data.meals[0].strMeal);
+    var mealIngredients = Object.keys(data.meals[0])
+      .filter((k) => k.startsWith("strIngredient"))
+      .map((v) => data.meals[0][v]);
+    for (let i = 0; i < mealIngredients.length; i++) {
+      randomMealIngredientsEl.innerHTML += " " + mealIngredients[i];
+    }
+  })
+  .catch((err) =>
+    console.error(err + "Error in fetching meal.  randomMealFetch")
+  );
+
 //functions
 drinksList.addEventListener("click", function (event) {
   if (event.target && event.target.innerHTML === "Vodka") {
