@@ -11,20 +11,20 @@ var MealsUrl = "https://themealdb.p.rapidapi.com/latest.php";
 var vodkaLinkEl = document.querySelector("#vodka");
 
 // Carousel set-up
-let slideIndex = 0;
-showSlides();
+// // let slideIndex = 0;
+// // showSlides();
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("slides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "hidden";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+// // function showSlides() {
+// //   let i;
+// //   let slides = document.getElementsByClassName("slides");
+// //   for (i = 0; i < slides.length; i++) {
+// //     slides[i].style.display = "hidden";
+// //   }
+// //   slideIndex++;
+// //   if (slideIndex > slides.length) {slideIndex = 1}
+// //   slides[slideIndex-1].style.display = "block";
+// //   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// }
 
 // // API CALL 1 COCKTAILDB
 // const cockTails = {
