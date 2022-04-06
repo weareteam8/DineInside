@@ -11,7 +11,7 @@
 * [Usage](#usage)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
+* [Team Members](#acknowledgements)
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
@@ -54,7 +54,7 @@ Provide various use cases and code examples here.
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is:  _complete_
 
 
 ## Room for Improvement
@@ -69,11 +69,12 @@ To do:
 - Feature to be added 2
 
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+## Team Members
+- George Saad
+- Nathan Boulianne
+- Anika McLean
+- Ore Banjoko
+- Jin KY
 
 
 ## Contact
