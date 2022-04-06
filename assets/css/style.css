@@ -25,7 +25,7 @@ body {
 .body-container {
   display: flex;
   background-color: brown;
-  height: 100%;
+  height: 65vh;
   width: 100%;
 }
 
@@ -59,6 +59,15 @@ body {
   height: 100%;
 }
 
+/* promotion part */
+.promotion-container {
+  display: flex;
+  background-color: rosybrown;
+
+  border-left: 7px groove rgb(255, 137, 176);
+  border-right: 7px groove rgb(255, 137, 176);
+  align-items: center;
+}
 /*meal part*/
 
 .meal-container {
