@@ -1,18 +1,85 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
+:root {
+    --muskyBlue: #08243b;
+    --muskyTeal: #56777c;
+    --muskyTan: #f2c999;
+    --muskyOrange: #c79360;
+    --muskyBrown: #75574e;
 }
-.navbar {
-  font-size: 50px;
+
+#ingredients {
+    font-size: 25px;
 }
-.jumbotron {
-  font-size: 40px;
+
+.details-meal-ingredients {
+    display: flex;
+    position: fixed;
 }
-.mixNMatch {
-  font-size: 25px;
+
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
 }
-.footer {
-  font-size: 100px;
+
+.body-container {
+    display: flex;
+    background-color: brown;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*mid*/
+
+
+/*drink part*/
+
+.drink-title {
+    font-size: 110%;
+    font-style: italic;
+    margin-left: 12cm;
+}
+
+.drink-content-container {
+    align-content: center;
+    align-content: flex-end;
+}
+
+.drink-container {
+    align-items: center;
+    align-content: center;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    margin-right: 11cm;
+}
+
+.drink-pic-container {
+    float: right;
+    height: 100%;
+}
+
+
+/*meal part*/
+
+.meal-container {
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-color: #c79360;
+}
+
+.meal-pic-container {
+    float: left;
+    height: 100%;
+}
+
+
+/*footer*/
+
+footer {
+    float: inline-end;
+    margin-top: auto;
 }
