@@ -11,8 +11,7 @@
 * [Usage](#usage)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
-* [Team Members](#acknowledgements)
-* [Contact](#contact)
+* [Team Members](#team-members)
 <!-- * [License](#license) -->
 
 
@@ -26,12 +25,11 @@ The aim of this project is to allow users to create home made cocktails and enjo
 - JSDelivr
 
 
-
 ## Features
-- MAIN PAGE
-- ALL BUTTONS WORKING
-- WORKING SEARCH BAR
-- API CALLS FROM EACH API IS ON THE PROJECT AND WORKS AS INTENDED
+- Main page
+- All buttons working
+- Working search bar 
+- API calls from each API is on the project and works as intended
 
 
 
@@ -58,7 +56,6 @@ Project is:  _complete_
 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
 - Improvement to be done 1
@@ -76,13 +73,3 @@ To do:
 - Ore Banjoko
 - Jin KY
 
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
