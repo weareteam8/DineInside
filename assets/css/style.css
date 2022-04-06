@@ -5,19 +5,28 @@
   --muskyOrange: #c79360;
   --muskyBrown: #75574e;
 }
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-}
 
 #ingredients {
   font-size: 25px;
 }
+
 .details-meal-ingredients {
   display: flex;
   position: fixed;
+}
+
+body {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  background-color: lightskyblue;
+}
+
+.body-container {
+  display: flex;
+  background-color: brown;
+  height: 100%;
+  width: 100%;
 }
 
 /*mid*/
@@ -41,7 +50,7 @@
   float: left;
   width: 100%;
   height: 100%;
-  background-color: blueviolet;
+  background-color: rgb(53, 52, 54);
   margin-right: 11cm;
 }
 
@@ -56,12 +65,17 @@
   float: right;
   width: 100%;
   height: 100%;
-  background-color: #c79360;
+  background-color: #302e2b;
+  align-items: baseline;
 }
 
 .meal-pic-container {
   float: left;
   height: 100%;
+}
+
+.meal-content-container {
+  padding-right: 1cm;
 }
 
 /*footer*/
