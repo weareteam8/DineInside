@@ -17,6 +17,8 @@ var randomDrinkTitleEl = document.getElementById("featuredDrinkTitle");
 var randomDrinkImgEl = document.getElementById("RandomDrinkImg");
 var randomDrinkIngredientsEl = document.getElementById("drinkIngredients");
 var featuredDrinkEl = document.getElementById("DRINKME");
+var mealInstructionsEl = document.getElementById("mealInstructions");
+var drinkInstructionsEl = document.getElementById("drinkInstructions");
 
 // // API CALL 1 COCKTAILDB
 const cockTails = {
@@ -43,10 +45,6 @@ fetch(cockTailUrl, cockTails)
       .map((f) => data.drinks[0][f]);
 
     for (let i = 0; i <= drinkIngredients.length; i++) {
-      randomDrinkIngredientsEl.innerHTML +=
-        " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
-
-      //if ingredient or measurement is null. stop looping, no more ingredients
       if (
         drinkIngredients[i] === null ||
         drinkIngredients[i] === "" ||
@@ -54,7 +52,10 @@ fetch(cockTailUrl, cockTails)
       ) {
         break;
       }
+      randomDrinkIngredientsEl.innerHTML +=
+        " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
     }
+    drinkInstructionsEl.innerHTML = data.drinks[0].strInstructions;
   })
   .catch((err) => console.error(err + "Error with Drinks"));
 
@@ -98,9 +99,6 @@ fetch("https://themealdb.p.rapidapi.com/random.php", randomMealFetch)
       .map((m) => data.meals[0][m]);
 
     for (let i = 0; i < mealIngredients.length; i++) {
-      randomMealIngredientsEl.innerHTML +=
-        "" + mealMeasurements[i] + " " + mealIngredients[i] + ", ";
-      // if ingredient or measurement is null. stop looping, no more ingredients
       if (
         mealIngredients[i] === null ||
         mealIngredients[i] === "" ||
@@ -108,7 +106,11 @@ fetch("https://themealdb.p.rapidapi.com/random.php", randomMealFetch)
       ) {
         break;
       }
+      randomMealIngredientsEl.innerHTML +=
+        "" + mealMeasurements[i] + " " + mealIngredients[i] + ", ";
+      // if ingredient or measurement is null. stop looping, no more ingredients
     }
+    mealInstructionsEl.innerHTML = data.meals[0].strInstructions;
   })
   .catch((err) =>
     console.error(err + "Error in fetching meal.  randomMealFetch")
@@ -187,6 +189,7 @@ drinksList.addEventListener("click", function (event) {
               randomDrinkIngredientsEl.innerHTML +=
                 " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
             }
+            drinkInstructionsEl.innerHTML = data.drinks[0].strInstructions;
           })
           .catch((err) => console.error(err));
       });
@@ -263,6 +266,7 @@ drinksList.addEventListener("click", function (event) {
               randomDrinkIngredientsEl.innerHTML +=
                 " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
             }
+            drinkInstructionsEl.innerHTML = data.drinks[0].strInstructions;
           })
           .catch((err) => console.error(err));
       });
@@ -339,6 +343,7 @@ drinksList.addEventListener("click", function (event) {
               randomDrinkIngredientsEl.innerHTML +=
                 " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
             }
+            drinkInstructionsEl.innerHTML = data.drinks[0].strInstructions;
           })
           .catch((err) => console.error(err));
       });
@@ -416,6 +421,7 @@ drinksList.addEventListener("click", function (event) {
               randomDrinkIngredientsEl.innerHTML +=
                 " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
             }
+            drinkInstructionsEl.innerHTML = data.drinks[0].strInstructions;
           })
           .catch((err) => console.error(err));
       });
@@ -488,6 +494,7 @@ drinksList.addEventListener("click", function (event) {
               randomDrinkIngredientsEl.innerHTML +=
                 " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
             }
+            drinkInstructionsEl.innerHTML = data.drinks[0].strInstructions;
           })
           .catch((err) => console.error(err));
       });
