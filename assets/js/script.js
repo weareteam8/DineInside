@@ -16,6 +16,7 @@ var randomMealIngredientsEl = document.getElementById("mealIngredients");
 var randomDrinkTitleEl = document.getElementById("featuredDrinkTitle");
 var randomDrinkImgEl = document.getElementById("RandomDrinkImg");
 var randomDrinkIngredientsEl = document.getElementById("drinkIngredients");
+var featuredDrinkEl = document.getElementById("DRINKME");
 
 // // API CALL 1 COCKTAILDB
 const cockTails = {
@@ -117,6 +118,79 @@ fetch("https://themealdb.p.rapidapi.com/random.php", randomMealFetch)
 drinksList.addEventListener("click", function (event) {
   if (event.target && event.target.innerHTML === "Vodka") {
     console.log("CLICKED VODKA");
+
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+        "X-RapidAPI-Key": "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+      },
+    };
+
+    var rannum = fetch(
+      "https://the-cocktail-db.p.rapidapi.com/filter.php?i=vodka",
+      options
+    )
+      .then((response) => response.json())
+      .then(function (data) {
+        //get random drink from 0-99 (100 drinks found in VODKA category)
+        var randomDrinkNum = Math.floor(Math.random() * (100 - 0 + 1));
+        // console.log(randomDrinkNum);
+
+        var listOfDrinks = data.drinks;
+        // console.log(listOfDrinks[randomDrinkNum].idDrink);
+
+        return listOfDrinks[randomDrinkNum].idDrink;
+      })
+      .catch((err) => console.error(err));
+    var giveRandomDrinkId = function () {
+      rannum.then(function (drinkID) {
+        const getDrinkFromId = {
+          method: "GET",
+          headers: {
+            "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+            "X-RapidAPI-Key":
+              "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+          },
+        };
+
+        fetch(
+          `https://the-cocktail-db.p.rapidapi.com/lookup.php?i=${drinkID}`,
+          getDrinkFromId
+        )
+          .then((response) => response.json())
+          .then(function (data) {
+            //this is a RANDOM DRINK WITH INGREDIENT VODKA
+            console.log(data.drinks[0]);
+            featuredDrinkEl.textContent = "Featured VODKA Drink";
+            randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
+
+            var drinkIngredients = Object.keys(data.drinks[0])
+              .filter((k) => k.startsWith("strIngredient"))
+              .map((m) => data.drinks[0][m]);
+
+            var drinkMeasure = Object.keys(data.drinks[0])
+              .filter((s) => s.startsWith("strMeasure"))
+              .map((f) => data.drinks[0][f]);
+            randomDrinkIngredientsEl.innerHTML = " ";
+            randomDrinkImgEl.setAttribute("src", data.drinks[0].strDrinkThumb);
+
+            for (let i = 0; i < drinkIngredients.length; i++) {
+              if (
+                drinkIngredients[i] === null ||
+                drinkIngredients[i] === null ||
+                drinkMeasure[i] === null
+              ) {
+                break;
+              }
+              randomDrinkIngredientsEl.innerHTML +=
+                " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
+            }
+          })
+          .catch((err) => console.error(err));
+      });
+    };
+    giveRandomDrinkId();
   } else if (event.target && event.target.innerHTML === "Gin") {
     console.log("CLICKED GIN");
   } else if (event.target && event.target.innerHTML === "Rum") {
