@@ -5,6 +5,9 @@
     --muskyOrange: #c79360;
     --muskyBrown: #75574e; 
     --mealContainer: #302e2b;
+    --footer: #87cefa;
+    --highlight: #ee82ee; 
+    --onClick: hsl(271, 76%, 53%);
 }
 
 #ingredients {
@@ -20,7 +23,7 @@ body {
     display: grid;
     margin: 0;
     padding: 0;
-    background-color: lightskyblue;
+    background-color: #87cefa;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
 }
@@ -34,13 +37,21 @@ body {
 
 /*more dynamic button behavior*/
 .btn:hover {
-    top: -2px;
+    background-color: var(--highlight);
+    border-radius: 11%;
+    padding: 4%;
 }
 
 .btn:active {
-    top: 0px;
+    background-color: var(--onClick);
+    border-radius: 11%;
+    padding: 0%;
 }
 
+.InLogo {
+    float: left;
+    left: 17%;
+}
 /*mid*/
 
 
@@ -101,8 +112,8 @@ body {
 footer {
     float: inline-end;
     margin-top: auto;
-    background-color: var(--mealContainer);
-    color: var(--muskyTan);
+    background-color: var(--highlight);
+    color: var(--mealContainer);
     font-size: 18px;
     font-style: normal;
 }
