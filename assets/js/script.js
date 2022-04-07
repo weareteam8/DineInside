@@ -470,7 +470,7 @@ drinksList.addEventListener("click", function (event) {
           .then(function (data) {
             //this is a RANDOM DRINK WITH INGREDIENT RUM
 
-            featuredDrinkEl.textContent = "Featured TEQUILA Drink";
+            featuredDrinkEl.textContent = "Featured Non Alcoholic Drink";
             randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
 
             var drinkIngredients = Object.keys(data.drinks[0])
