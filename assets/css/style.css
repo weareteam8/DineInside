@@ -1,0 +1,126 @@
+:root {
+    --muskyBlue: #08243b;
+    --muskyTeal: #56777c;
+    --muskyTan: #f2c999;
+    --muskyOrange: #c79360;
+    --muskyBrown: #75574e;
+    --mealContainer: #302e2b;
+    --footer: #87cefa;
+    --highlight: #ee82ee;
+    --onClick: hsl(271, 76%, 53%);
+}
+
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
+}
+
+.body-container {
+    display: flex;
+    background-image: url(../images/barkbackground\ 1.jpg);
+    height: 65vh;
+    width: 100%;
+}
+
+.wrapper {
+    height: 100px;
+}
+
+
+/*more dynamic button behavior*/
+
+.btn:hover {
+    background-color: var(--highlight);
+    border-radius: 11%;
+    padding: 4%;
+}
+
+.btn:active {
+    background-color: var(--onClick);
+    border-radius: 11%;
+    padding: 0%;
+}
+
+.logotitle {
+    font-size: 200%;
+}
+
+.InLogo {
+    float: left;
+    left: 16%;
+    width: 8%;
+}
+
+
+/*content containers*/
+
+.left {
+    align-items: flex-start;
+    float: left;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+.right {
+    align-items: baseline;
+    float: left;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+.center {
+    text-align: center;
+    background-color: transparent;
+    height: 100%;
+    width: 300px;
+    margin: 0 300px;
+}
+
+.featuredDrinkTitle {
+    font-size: 110%;
+    font-style: italic;
+    margin-left: 12cm;
+}
+
+.featuredMealTitle {
+    padding-left: 10cm;
+    font-size: 110%;
+    font-style: italic;
+    margin-left: 12cm;
+}
+
+.drink-pic-container {
+    float: right;
+    height: 100%;
+}
+
+.meal-pic-container {
+    float: right;
+    height: 100%;
+}
+
+.drink-content-container {
+    float: right;
+}
+
+.mid-content {
+    font-size: 300%;
+    background-color: transparent;
+    margin-top: 8cm;
+}
+
+
+/*footer*/
+
+footer {
+    float: inline-end;
+    margin-top: auto;
+    background-color: var(--highlight);
+    color: var(--mealContainer);
+    font-size: 18px;
+    font-style: normal;
+}
