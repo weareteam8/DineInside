@@ -1,3 +1,7 @@
+* {
+    display: flexbox;
+}
+
 :root {
     --muskyBlue: #08243b;
     --muskyTeal: #56777c;
@@ -20,7 +24,7 @@ body {
 .body-container {
     display: flex;
     background-image: url(../images/barkbackground\ 1.jpg);
-    height: 65vh;
+    height: 70vh;
     width: 100%;
 }
 
@@ -57,7 +61,7 @@ body {
 /*content containers*/
 
 .left {
-    align-items: flex-start;
+    align-items: left;
     float: left;
     height: 100%;
     width: auto;
@@ -65,7 +69,7 @@ body {
 }
 
 .right {
-    align-items: baseline;
+    align-items: right;
     float: left;
     height: 100%;
     width: auto;
@@ -93,18 +97,14 @@ body {
     margin-left: 12cm;
 }
 
-.drink-pic-container {
+.drink-pic {
     float: right;
     height: 100%;
 }
 
 .meal-pic-container {
-    float: right;
+    float: left;
     height: 100%;
-}
-
-.drink-content-container {
-    float: right;
 }
 
 .mid-content {
