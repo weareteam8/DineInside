@@ -45,15 +45,15 @@ The aim of this project is to allow users to create home made cocktails and enjo
 
 
 ## Usage
-AS A USER
+**AS A USER**
 
 I WANT to find alcoholic/non-alcoholic cocktails paired with meals
 
 SO THAT I can create a dine in restaurant vibe in the comfort of my home
-<br />
+<br/><br/>
 
 ACCEPTANCE TEST FOR USER STORY
-<br />
+<br/><br/>
 
 GIVEN sets of ingredients, drinks, and meals. 
 
@@ -64,18 +64,18 @@ THEN presented with main page with drink category nav bar & search button
 WHEN I select a drink category
 
 THEN it takes me to that page with similar drinks
-<br />
- 
+<br/><br/>
+
 WHEN I hover over a picture of a drink
 
 THEN I can see what type of drink category it belongs to
- <br />
- 
+<br/><br/>
+
 WHEN I search an ingredient(s)
 
 THEN I should be taken to a page with drinks or meals that contain that/those ingredient(s)
-<br />
- 
+<br/><br/>
+
 WHEN I search ingredients or meals
 
 THEN I can have them saved as future preferences (localstorage)
