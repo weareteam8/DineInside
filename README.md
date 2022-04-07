@@ -34,13 +34,14 @@ The aim of this project is to allow users to create home made cocktails and enjo
 
 
 ## Logo
-![Example screenshot](./img/Qine-Icon.png)
+![image](https://user-images.githubusercontent.com/102684089/162097229-b1c661f0-aad0-4c54-81fb-3816f9b128b7.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
 ## Built With 
 - HTML 
 - CSS
+- Javascript 
 
 
 ## Usage
