@@ -30,8 +30,8 @@ const cockTails = {
 fetch(cockTailUrl, cockTails)
   .then((response) => response.json())
   .then(function (data) {
-    console.log(data.drinks[0]) +
-      (randomDrinkTitleEl.innerHTML = data.drinks[0].strDrink) +
+    // console.log(data.drinks[0])
+    (randomDrinkTitleEl.innerHTML = data.drinks[0].strDrink) +
       randomDrinkImgEl.setAttribute("src", data.drinks[0].strDrinkThumb);
 
     var drinkIngredients = Object.keys(data.drinks[0])
@@ -138,7 +138,7 @@ drinksList.addEventListener("click", function (event) {
         // console.log(randomDrinkNum);
 
         var listOfDrinks = data.drinks;
-        console.log(listOfDrinks);
+        // console.log(listOfDrinks);
         // console.log(listOfDrinks[randomDrinkNum].idDrink);
 
         return listOfDrinks[randomDrinkNum].idDrink;
@@ -162,7 +162,7 @@ drinksList.addEventListener("click", function (event) {
           .then((response) => response.json())
           .then(function (data) {
             //this is a RANDOM DRINK WITH INGREDIENT VODKA
-            console.log(data.drinks[0]);
+            // console.log(data.drinks[0]);
             featuredDrinkEl.textContent = "Featured VODKA Drink";
             randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
 
@@ -214,7 +214,7 @@ drinksList.addEventListener("click", function (event) {
         // console.log(randomDrinkNum);
 
         var listOfDrinks = data.drinks;
-        console.log(listOfDrinks);
+        // console.log(listOfDrinks);
         // console.log(listOfDrinks[randomDrinkNum].idDrink);
 
         return listOfDrinks[randomDrinkNum].idDrink;
@@ -290,7 +290,7 @@ drinksList.addEventListener("click", function (event) {
         // console.log(randomDrinkNum);
 
         var listOfDrinks = data.drinks;
-        console.log(listOfDrinks);
+        // console.log(listOfDrinks);
         // console.log(listOfDrinks[randomDrinkNum].idDrink);
 
         return listOfDrinks[randomDrinkNum].idDrink;
@@ -344,9 +344,154 @@ drinksList.addEventListener("click", function (event) {
       });
     };
     giveRandomDrinkId();
-  } else if (event.target && event.target.innerHTML === "Whiskey") {
-    console.log("clicked Whiskey");
+  } else if (event.target && event.target.innerHTML === "Tequila") {
+    console.log("clicked Tequila");
+
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+        "X-RapidAPI-Key": "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+      },
+    };
+
+    var rannum = fetch(
+      "https://the-cocktail-db.p.rapidapi.com/filter.php?i=TEQUILA",
+      options
+    )
+      .then((response) => response.json())
+      .then(function (data) {
+        //get random drink from 0-29 (30 drinks found in TEQUILA category)
+        var randomDrinkNum = Math.floor(Math.random() * 29);
+        // console.log(randomDrinkNum);
+
+        var listOfDrinks = data.drinks;
+        // console.log(listOfDrinks);
+
+        // console.log(listOfDrinks[randomDrinkNum].idDrink);
+
+        return listOfDrinks[randomDrinkNum].idDrink;
+      })
+      .catch((err) => console.error(err));
+    var giveRandomDrinkId = function () {
+      rannum.then(function (drinkID) {
+        const getDrinkFromId = {
+          method: "GET",
+          headers: {
+            "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+            "X-RapidAPI-Key":
+              "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+          },
+        };
+
+        fetch(
+          `https://the-cocktail-db.p.rapidapi.com/lookup.php?i=${drinkID}`,
+          getDrinkFromId
+        )
+          .then((response) => response.json())
+          .then(function (data) {
+            //this is a RANDOM DRINK WITH INGREDIENT RUM
+
+            featuredDrinkEl.textContent = "Featured TEQUILA Drink";
+            randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
+
+            var drinkIngredients = Object.keys(data.drinks[0])
+              .filter((k) => k.startsWith("strIngredient"))
+              .map((m) => data.drinks[0][m]);
+
+            var drinkMeasure = Object.keys(data.drinks[0])
+              .filter((s) => s.startsWith("strMeasure"))
+              .map((f) => data.drinks[0][f]);
+            randomDrinkIngredientsEl.innerHTML = " ";
+            randomDrinkImgEl.setAttribute("src", data.drinks[0].strDrinkThumb);
+
+            for (let i = 0; i < drinkIngredients.length; i++) {
+              if (
+                drinkIngredients[i] === null ||
+                drinkIngredients[i] === null ||
+                drinkMeasure[i] === null
+              ) {
+                break;
+              }
+              randomDrinkIngredientsEl.innerHTML +=
+                " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
+            }
+          })
+          .catch((err) => console.error(err));
+      });
+    };
+    giveRandomDrinkId();
   } else if (event.target && event.target.innerHTML === "NonAlcoholic") {
     console.log("NO ALCOHOL");
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+        "X-RapidAPI-Key": "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+      },
+    };
+
+    var rannum = fetch(
+      "https://the-cocktail-db.p.rapidapi.com/filter.php?a=Non alcoholic",
+      options
+    )
+      .then((response) => response.json())
+      .then(function (data) {
+        console.log(data.drinks);
+        // non alcoholic drinks have 58 drinks, get a random drink from all 58
+        var randomDrinkNum = Math.floor(Math.random() * 57);
+        var listOfDrinks = data.drinks;
+        return listOfDrinks[randomDrinkNum].idDrink;
+      })
+      .catch((err) => console.error(err));
+
+    var giveRandomDrinkId = function () {
+      rannum.then(function (drinkID) {
+        const getDrinkFromId = {
+          method: "GET",
+          headers: {
+            "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+            "X-RapidAPI-Key":
+              "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+          },
+        };
+
+        fetch(
+          `https://the-cocktail-db.p.rapidapi.com/lookup.php?i=${drinkID}`,
+          getDrinkFromId
+        )
+          .then((response) => response.json())
+          .then(function (data) {
+            //this is a RANDOM DRINK WITH INGREDIENT RUM
+
+            featuredDrinkEl.textContent = "Featured TEQUILA Drink";
+            randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
+
+            var drinkIngredients = Object.keys(data.drinks[0])
+              .filter((k) => k.startsWith("strIngredient"))
+              .map((m) => data.drinks[0][m]);
+
+            var drinkMeasure = Object.keys(data.drinks[0])
+              .filter((s) => s.startsWith("strMeasure"))
+              .map((f) => data.drinks[0][f]);
+            randomDrinkIngredientsEl.innerHTML = " ";
+            randomDrinkImgEl.setAttribute("src", data.drinks[0].strDrinkThumb);
+
+            for (let i = 0; i < drinkIngredients.length; i++) {
+              if (
+                drinkIngredients[i] === null ||
+                drinkIngredients[i] === null ||
+                drinkMeasure[i] === null
+              ) {
+                break;
+              }
+              randomDrinkIngredientsEl.innerHTML +=
+                " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
+            }
+          })
+          .catch((err) => console.error(err));
+      });
+    };
+    giveRandomDrinkId();
   }
 });
