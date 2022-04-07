@@ -43,14 +43,9 @@ fetch(cockTailUrl, cockTails)
 
     for (let i = 0; i <= drinkIngredients.length; i++) {
       randomDrinkIngredientsEl.innerHTML +=
-        " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
-      console.log(drinkMeasure[i]);
+        " " + drinkMeasure[i] + " " + drinkIngredients[i];
       //if ingredient or measurement is null. stop looping, no more ingredients
-      if (
-        drinkIngredients[i] === null ||
-        drinkIngredients[i] === "" ||
-        drinkMeasure[i] === null
-      ) {
+      if (drinkIngredients[i] === null || drinkMeasure[i] === null) {
         break;
       }
     }
@@ -96,18 +91,16 @@ fetch("https://themealdb.p.rapidapi.com/random.php", randomMealFetch)
       .filter((k) => k.startsWith("strMeasure"))
       .map((m) => data.meals[0][m]);
 
+    console.log(mealMeasurements);
+    console.log(mealIngredients);
     for (let i = 0; i < mealIngredients.length; i++) {
       randomMealIngredientsEl.innerHTML +=
-        "" + mealMeasurements[i] + " " + mealIngredients[i] + ", ";
-      // if ingredient or measurement is null. stop looping, no more ingredients
-      if (
-        mealIngredients[i] === null ||
-        mealIngredients[i] === "" ||
-        mealMeasurements[i] === null
-      ) {
-        break;
-      }
+        "" + mealMeasurements[i] + " " + mealIngredients[i];
     }
+    //if ingredient or measurement is null. stop looping, no more ingredients
+    // if (mealIngredients[i] === null || mealMeasurements[i] === null) {
+    //   break;
+    // }
   })
   .catch((err) =>
     console.error(err + "Error in fetching meal.  randomMealFetch")

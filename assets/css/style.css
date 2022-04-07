@@ -1,95 +1,108 @@
 :root {
-  --muskyBlue: #08243b;
-  --muskyTeal: #56777c;
-  --muskyTan: #f2c999;
-  --muskyOrange: #c79360;
-  --muskyBrown: #75574e;
+    --muskyBlue: #08243b;
+    --muskyTeal: #56777c;
+    --muskyTan: #f2c999;
+    --muskyOrange: #c79360;
+    --muskyBrown: #75574e; 
+    --mealContainer: #302e2b;
 }
 
 #ingredients {
-  font-size: 25px;
+    font-size: 25px;
 }
 
 .details-meal-ingredients {
-  display: flex;
-  position: fixed;
+    display: flex;
+    position: fixed;
 }
 
 body {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  background-color: lightskyblue;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
 
 .body-container {
-  display: flex;
-  background-color: brown;
-  height: 65vh;
-  width: 100%;
+    display: flex;
+    background-color: brown;
+    height: 100%;
+    width: 100%;
+}
+
+/*more dynamic button behavior*/
+.btn:hover {
+    top: -2px;
+}
+
+.btn:active {
+    top: 0px;
 }
 
 /*mid*/
 
+
 /*drink part*/
 
 .drink-title {
-  font-size: 110%;
-  font-style: italic;
-  margin-left: 12cm;
+    font-size: 110%;
+    font-style: italic;
+    margin-left: 12cm;
 }
 
 .drink-content-container {
-  align-content: center;
-  align-content: flex-end;
+    align-content: center;
+    align-content: flex-end;
 }
 
 .drink-container {
-  align-items: center;
-  align-content: center;
-  float: left;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(53, 52, 54);
-  margin-right: 11cm;
+    align-items: center;
+    align-content: center;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(53, 52, 54);
+    margin-right: 12cm;
 }
 
 .drink-pic-container {
-  float: right;
-  height: 100%;
+    float: right;
+    height: 100%;
 }
 
-/* promotion part */
-.promotion-container {
-  display: flex;
-  background-color: rosybrown;
 
-  border-left: 7px groove rgb(255, 137, 176);
-  border-right: 7px groove rgb(255, 137, 176);
-  align-items: center;
-}
 /*meal part*/
 
 .meal-container {
-  float: right;
-  width: 100%;
-  height: 100%;
-  background-color: #302e2b;
-  align-items: baseline;
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-color: #302e2b;
+    align-items: baseline;
 }
 
 .meal-pic-container {
-  float: left;
-  height: 100%;
+    float: left;
+    height: 100%;
 }
 
 .meal-content-container {
-  padding-right: 1cm;
+    padding-right: 1cm;
+}
+
+.carousel {
+    padding-top: 10%;
 }
 
 /*footer*/
 
 footer {
-  float: inline-end;
-  margin-top: auto;
+    float: inline-end;
+    margin-top: auto;
+    background-color: var(--mealContainer);
+    color: var(--muskyTan);
+    font-size: 18px;
+    font-style: normal;
 }

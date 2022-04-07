@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/protal.css" /> -->
+    <link rel="stylesheet" href="./assets/css/protal.css" />
     <title>DineIn - Meet Your taste craving Matchups</title>
 </head>
 <header>
@@ -26,36 +26,36 @@
                 <div class="flex items-center">
                     <div>
                         <h1 class="text-2xl ml-3 text-rose-900 font-bold sm:text-2xl md:text-2xl lg:text-4xl 2xl:text-5xl">
-                            
+                            <!-- todo: ADD LOGO -->
                             <a href="/">DineInside</a>
                         </h1>
                     </div>
                     <!-- div Container for 5 list items -->
-                    <div class="drinks-list">
+                    <div>
                         <ul class="invisible flex sm:visible sm:space-x-4 sm:ml-2 lg:space-x-8 2xl:space-x-12">
                             <li>
                                 <a href="#">
-                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl lg:ml-12 2xl:text-4xl" id="vodka">Vodka</span>
+                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl lg:ml-12 2xl:text-4xl btn" id="vodka">Vodka</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl" id="Gin">Gin</span>
+                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl btn" id="Gin">Gin</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl" id="Rum">Rum</span>
+                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl btn" id="Rum">Rum</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl" id="Whiskey">Whiskey</span>
+                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl btn" id="Whiskey">Whiskey</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl" id="NoAlc">NonAlcoholic</span>
+                                    <span class="text-rose-200 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl btn" id="NoAlc">NonAlcoholic</span>
                                 </a>
                             </li>
                         </ul>
@@ -65,7 +65,7 @@
                 <div class="flex mr-1 lg:h-full">
                     <input class="h-3/4 bg-slate-200 rounded-lg pl-1 sm:w-32 placeholder:text-lg animate-pulse md:w-48 md:ml-5 xl:text-3xl xl:placeholder:text-3xl 2xl:w-72" type="text" placeholder="Search..." />
                     <button>
-                      <i class="text-2xl ml-1 fa-solid fa-magnifying-glass sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl"></i>
+                      <i class="text-2xl ml-1 fa-solid fa-magnifying-glass sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl btn"></i>
                     </button>
                 </div>
             </nav>
@@ -73,10 +73,10 @@
 </header>
 
 <body>
-    <div class="body-container"> 
-        <!--3 containers for drink and food, and promotion in middle!-->
+    <div class="body-container">
+        <!--2 containers for drink and food-->
         <div class="drink-container">
-            <h2 class="text-6xl text-orange-400 mb-12 border-b-2 border-rose-100">
+            <h2 class="text-4xl text-orange-400">
                 Featured Drink:
                 <span id="featuredDrinkTitle" class="text-rose-100"></span>
             </h2>
@@ -85,31 +85,25 @@
             </div>
             <div class="drink-content-container">
                 <details>
-                    <summary class="text-rose-100 text-3xl">Ingredients</summary>
+                    <summary class="text-rose-100 text-2xl">Ingredients</summary>
                     <p id="drinkIngredients" class="text-2xl text-rose-100"></p>
                 </details>
             </div>
         </div>
-        <div class="promotion-container  ">
-            <p class="text">
-                Checkout this Awesome Combo!
-            </p>
-
-        </div>
 
         <!--food-->
         <div class="meal-container">
-            <h2 class="text-6xl text-orange-400 mb-12 border-b-2 border-rose-100">
+            <h2 class="text-4xl text-orange-400">
                 Featured Meal:
                 <span class="text-rose-100" id="featuredMealTitle"></span>
             </h2>
             <div class="meal-pic-container">
-                <img src="https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg" id="RandomMealImg"  class="border-8 border-rose-500" />
+                <img src="https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg" id="RandomMealImg" style="width: 80%" class="border-8 border-rose-500" />
             </div>
             <div class="meal-content-container">
                 <details>
                     <summary class="text-rose-100 text-2xl">Ingredients</summary>
-                    <p id="mealIngredients" class="text-2xl text-rose-100"></p>
+                    <p id="ingredients" class="text-2xl text-rose-100"></p>
                 </details>
             </div>
         </div>
@@ -153,9 +147,8 @@
   </button>
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-    <!-- <script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -165,12 +158,12 @@
                 }
             }
         }
-    </script> -->
+    </script>
 
 
     <!-- TailWind CSS CDN! -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <!-- <script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -180,8 +173,7 @@
                 },
             },
         };
-    </script> -->
-    <script src="./assets/js/script.js"></script>t
+    </script>
 
 </body>
 <!-- Footer -->
@@ -189,9 +181,11 @@
 <footer>
     <div class="row p-2 text-center">
         <div class="col-12">
-            <p class="mb-0"><span>made by team 8</p>
+            <p class="mb-0"><span>Made by the DineInside code team</p>
+            </br>
+            &copy; 2022 DineInside, Inc.
+        </div>
     </div>
-  </div>
 </footer>
 
 </html>
