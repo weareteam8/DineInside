@@ -45,7 +45,7 @@ fetch(cockTailUrl, cockTails)
     for (let i = 0; i <= drinkIngredients.length; i++) {
       randomDrinkIngredientsEl.innerHTML +=
         " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
-      console.log(drinkMeasure[i]);
+
       //if ingredient or measurement is null. stop looping, no more ingredients
       if (
         drinkIngredients[i] === null ||
@@ -138,6 +138,7 @@ drinksList.addEventListener("click", function (event) {
         // console.log(randomDrinkNum);
 
         var listOfDrinks = data.drinks;
+        console.log(listOfDrinks);
         // console.log(listOfDrinks[randomDrinkNum].idDrink);
 
         return listOfDrinks[randomDrinkNum].idDrink;
@@ -193,8 +194,156 @@ drinksList.addEventListener("click", function (event) {
     giveRandomDrinkId();
   } else if (event.target && event.target.innerHTML === "Gin") {
     console.log("CLICKED GIN");
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+        "X-RapidAPI-Key": "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+      },
+    };
+
+    var rannum = fetch(
+      "https://the-cocktail-db.p.rapidapi.com/filter.php?i=GIN",
+      options
+    )
+      .then((response) => response.json())
+      .then(function (data) {
+        //get random drink from 0-106 (106 drinks found in GIN category)
+
+        var randomDrinkNum = Math.floor(Math.random() * 106);
+        // console.log(randomDrinkNum);
+
+        var listOfDrinks = data.drinks;
+        console.log(listOfDrinks);
+        // console.log(listOfDrinks[randomDrinkNum].idDrink);
+
+        return listOfDrinks[randomDrinkNum].idDrink;
+      })
+      .catch((err) => console.error(err));
+    var giveRandomDrinkId = function () {
+      rannum.then(function (drinkID) {
+        const getDrinkFromId = {
+          method: "GET",
+          headers: {
+            "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+            "X-RapidAPI-Key":
+              "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+          },
+        };
+
+        fetch(
+          `https://the-cocktail-db.p.rapidapi.com/lookup.php?i=${drinkID}`,
+          getDrinkFromId
+        )
+          .then((response) => response.json())
+          .then(function (data) {
+            //this is a RANDOM DRINK WITH INGREDIENT VODKA
+
+            featuredDrinkEl.textContent = "Featured GIN Drink";
+            randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
+
+            var drinkIngredients = Object.keys(data.drinks[0])
+              .filter((k) => k.startsWith("strIngredient"))
+              .map((m) => data.drinks[0][m]);
+
+            var drinkMeasure = Object.keys(data.drinks[0])
+              .filter((s) => s.startsWith("strMeasure"))
+              .map((f) => data.drinks[0][f]);
+            randomDrinkIngredientsEl.innerHTML = " ";
+            randomDrinkImgEl.setAttribute("src", data.drinks[0].strDrinkThumb);
+
+            for (let i = 0; i < drinkIngredients.length; i++) {
+              if (
+                drinkIngredients[i] === null ||
+                drinkIngredients[i] === null ||
+                drinkMeasure[i] === null
+              ) {
+                break;
+              }
+              randomDrinkIngredientsEl.innerHTML +=
+                " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
+            }
+          })
+          .catch((err) => console.error(err));
+      });
+    };
+    giveRandomDrinkId();
   } else if (event.target && event.target.innerHTML === "Rum") {
     console.log("Clicked RUM");
+
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+        "X-RapidAPI-Key": "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+      },
+    };
+
+    var rannum = fetch(
+      "https://the-cocktail-db.p.rapidapi.com/filter.php?i=RUM",
+      options
+    )
+      .then((response) => response.json())
+      .then(function (data) {
+        //get random drink from 0-25 (26 drinks found in RUM category)
+        var randomDrinkNum = Math.floor(Math.random() * 25);
+        // console.log(randomDrinkNum);
+
+        var listOfDrinks = data.drinks;
+        console.log(listOfDrinks);
+        // console.log(listOfDrinks[randomDrinkNum].idDrink);
+
+        return listOfDrinks[randomDrinkNum].idDrink;
+      })
+      .catch((err) => console.error(err));
+    var giveRandomDrinkId = function () {
+      rannum.then(function (drinkID) {
+        const getDrinkFromId = {
+          method: "GET",
+          headers: {
+            "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+            "X-RapidAPI-Key":
+              "37f2a9a7cemsh5b611bc49e7a303p1e79e6jsn6b86cc035e5d",
+          },
+        };
+
+        fetch(
+          `https://the-cocktail-db.p.rapidapi.com/lookup.php?i=${drinkID}`,
+          getDrinkFromId
+        )
+          .then((response) => response.json())
+          .then(function (data) {
+            //this is a RANDOM DRINK WITH INGREDIENT RUM
+
+            featuredDrinkEl.textContent = "Featured RUM Drink";
+            randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
+
+            var drinkIngredients = Object.keys(data.drinks[0])
+              .filter((k) => k.startsWith("strIngredient"))
+              .map((m) => data.drinks[0][m]);
+
+            var drinkMeasure = Object.keys(data.drinks[0])
+              .filter((s) => s.startsWith("strMeasure"))
+              .map((f) => data.drinks[0][f]);
+            randomDrinkIngredientsEl.innerHTML = " ";
+            randomDrinkImgEl.setAttribute("src", data.drinks[0].strDrinkThumb);
+
+            for (let i = 0; i < drinkIngredients.length; i++) {
+              if (
+                drinkIngredients[i] === null ||
+                drinkIngredients[i] === null ||
+                drinkMeasure[i] === null
+              ) {
+                break;
+              }
+              randomDrinkIngredientsEl.innerHTML +=
+                " " + drinkMeasure[i] + " " + drinkIngredients[i] + ", ";
+            }
+          })
+          .catch((err) => console.error(err));
+      });
+    };
+    giveRandomDrinkId();
   } else if (event.target && event.target.innerHTML === "Whiskey") {
     console.log("clicked Whiskey");
   } else if (event.target && event.target.innerHTML === "NonAlcoholic") {
