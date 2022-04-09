@@ -19,14 +19,14 @@
     <!-- content Wrapper -->
     <div>
         <!-- navbar Wrapper -->
-        <div class="bg-red-400 h-16 lg:h-20">
+        <div class="bg-red-400 h-16 lg:h-32  " >
             <!-- navbar -->
-            <nav class="pt-3 flex justify-between">
+            <nav class="pt-3 flex justify-between ">
                 <!-- App Title Container -->
-                <div class="flex items-center">
+                <div class="flex ">
                     <div>
                         <h1 class="text-2xl ml-3 text-rose-900 font-bold">
-                            <!-- todo: ADD LOGO -->
+                            
                             <a class="logotitle">DineInside</a>
                         </h1>
                     </div>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <!-- right side of navbar -->
-                <div class="flex mr-1 lg:h-full">
+                <div  id = "searchBar" class="flex mr-1 lg:h-full">
                     <input class="h-3/4 bg-slate-200 rounded-lg pl-1 sm:w-32 placeholder:text-lg animate-pulse md:w-48 md:ml-5 xl:text-3xl xl:placeholder:text-3xl 2xl:w-72" type="text" placeholder="Search..." />
                     <button>
                       <i class="text-2xl ml-1 fa-solid fa-magnifying-glass sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl btn"></i>
@@ -74,7 +74,10 @@
 </header>
 
 <body>
-    <div class="body-container">
+    <div class="main-page" id = "main-page" style="display: none;">
+
+    
+        <div class="body-container">
         <!--3 containers for drink and food, and promotion in middle!-->
         <div class="left">
             <h2 id="DRINKME" class="text-6xl text-orange-400 border-b-2 border-rose-100">
@@ -124,10 +127,11 @@
                 </details>
             </div>
         </div>
-    </div>
+        </div>
 
     <!--test-->
-    <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
+
+        <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
         <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -162,42 +166,27 @@
     <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+        </div>
+    </div>
+
+    <!-- display this when user not old enough -->
+    <div class="youngAge bg-rose-200" id="youngAge" style="display: hidden; ">
+        <h2>Our website provides access to alcohol related information. According to the law you need to be over the age of 
+            <span style="font-weight: 700; border-bottom: 3px solid red; color: red; ">
+                21
+            </span> to view this content.</h2>
+        <img  id = "youngAgeLogo"src="./assets/images/InLogo.png" alt="" style="width: 75vw; height: 72vh; border-radius: 30px; align-self: center;" >
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-    <!-- <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script> -->
-
-
-    <!-- TailWind CSS CDN! -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <!-- <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: "#c73439",
-                    },
-                },
-            },
-        };
-    </script> -->
+   
     <script src="./assets/js/script.js"></script>
 
 </body>
 <!-- Footer -->
 <footer>
-    <div class="row p-2 text-center">
+    <div class="row p-2 text-center text-2xl">
         <div class="col-12">
             <p class="mb-0"><span>Made by the Eight is Enough code team</p>
             </br>
