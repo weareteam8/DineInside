@@ -37,8 +37,8 @@ var drinkingAgeRegulation = function () {
     drinksList.setAttribute("style", "display:none;");
     document.getElementById("searchBar").setAttribute("style", "display:none;");
   } else {
+    youngAgeEl.setAttribute("style", "display:hidden;");
     mainPageEl.setAttribute("style", "display:block");
-    youngAgeEl.setAttribute("style", "display:none;");
 
     var getCockTails = function () {
       const cockTails = {
