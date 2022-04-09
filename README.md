@@ -85,6 +85,13 @@ THEN I can have them saved as future preferences (localstorage)
 ## Project Status
 Project is:  _complete_
 
+## Screenshot
+
+## Links
+
+- [Github](https://github.com/weareteam8/DineInside)
+- [dineÎNside](https://weareteam8.github.io/DineInside/)
+
 
 ## Directions for Future Development
 
