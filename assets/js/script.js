@@ -38,6 +38,7 @@ var drinkingAgeRegulation = function () {
     document.getElementById("searchBar").setAttribute("style", "display:none;");
   } else {
     mainPageEl.setAttribute("style", "display:block");
+    youngAgeEl.setAttribute("style", "display:none;");
 
     var getCockTails = function () {
       const cockTails = {
