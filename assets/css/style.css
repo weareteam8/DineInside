@@ -111,9 +111,9 @@ body {
 }
 
 .mid-content {
-  font-size: 300%;
+  font-size: 200%;
   background-color: transparent;
-  margin-top: 8cm;
+  margin-top: 6cm;
 }
 
 /*footer*/
@@ -126,6 +126,7 @@ footer {
   font-size: 18px;
   font-style: normal;
 }
+
 .youngAge {
   display: flex;
   flex-direction: column;

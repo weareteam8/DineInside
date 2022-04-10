@@ -622,7 +622,7 @@ var drinkingAgeRegulation = function () {
                     console.log(data);
 
                     featuredDrinkEl.textContent =
-                      "FEATURED DRINK USING FIRST INGREDIENT: " +
+                      "Featured Dink Using First Ingredient: " +
                       ingredientOne[0].toUpperCase();
                     searchedIngredients.toUpperCase();
                     randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
@@ -694,7 +694,7 @@ var drinkingAgeRegulation = function () {
                 console.log(data);
 
                 featuredDrinkEl.textContent =
-                  "FEATURED DRINK USING INGREDIENTS: " +
+                  "Feature Drink Using Ingredients: " +
                   searchedIngredients.toUpperCase();
                 randomDrinkTitleEl.textContent = data.drinks[0].strDrink;
 
