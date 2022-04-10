@@ -86,6 +86,8 @@ THEN I can have them saved as future preferences (localstorage)
 Project is:  _complete_
 
 ## Screenshot
+![dineÎNside](https://user-images.githubusercontent.com/102684089/162635775-8f125ef3-2ac4-4b8a-8e3b-ff221b71e65e.png)
+
 
 ## Links
 
