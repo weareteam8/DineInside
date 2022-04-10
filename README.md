@@ -86,17 +86,14 @@ THEN I can have them saved as future preferences (localstorage)
 Project is:  _complete_
 
 ## Screenshot
-![dineÎNside](https://user-images.githubusercontent.com/102684089/162635775-8f125ef3-2ac4-4b8a-8e3b-ff221b71e65e.png)
-
+![dineÎNside](https://user-images.githubusercontent.com/102684089/162635839-a049167e-2480-4f29-9a7c-d2b4cf5cc766.png)
 
 ## Links
-
 - [Github](https://github.com/weareteam8/DineInside)
 - [dineÎNside](https://weareteam8.github.io/DineInside/)
 
 
 ## Directions for Future Development
-
 - add a more interactive user experience where they are proposed potential meals depending on their drink selection rather than the meal pairing being random. This would be to promote a better food and drink pairing that users might better enjoy with their drink. 
 
 - hone in on user’s locations to present them with their nearest liquor store/grocery store to make the experience from web to store and mixing linear and less complicated. The more we can do for our users, the less they can worry about the preparation and focus on relaxing and enjoying our suggested drink and meal combo.
