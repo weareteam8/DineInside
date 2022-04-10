@@ -19,14 +19,14 @@
     <!-- content Wrapper -->
     <div>
         <!-- navbar Wrapper -->
-        <div class="bg-red-400 h-16 lg:h-32  " >
+        <div class="bg-red-400 h-16 lg:h-32  ">
             <!-- navbar -->
             <nav class="pt-3 flex justify-between ">
                 <!-- App Title Container -->
                 <div class="flex ">
                     <div>
                         <h1 class="text-2xl ml-3 text-rose-900 font-bold">
-                            
+
                             <a class="logotitle">DineInside</a>
                         </h1>
                     </div>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <!-- right side of navbar -->
-                <div  id = "searchBar" class="flex mr-1 lg:h-full">
+                <div id="searchBar" class="flex mr-1 lg:h-full">
                     <input class="h-3/4 bg-slate-200 rounded-lg pl-1 sm:w-32 placeholder:text-lg animate-pulse md:w-48 md:ml-5 xl:text-3xl xl:placeholder:text-3xl 2xl:w-72" type="text" placeholder="Search..." />
                     <button>
                       <i class="text-2xl ml-1 fa-solid fa-magnifying-glass sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl btn"></i>
@@ -74,95 +74,95 @@
 </header>
 
 <body>
-    <div class="main-page" id = "main-page" style="display: none;">
+    <div class="main-page" id="main-page" style="display: none;">
 
-    
+
         <div class="body-container">
-        <!--3 containers for drink and food, and promotion in middle!-->
-        <div class="left">
-            <h2 id="DRINKME" class="text-6xl text-orange-400 border-b-2 border-rose-100">
-                Featured Drink:
-            </h2>
-            <span id="featuredDrinkTitle" class="text-rose-100 text-6xl mb-12"></span>
-            <div class="drink-pic">
-                <img src="https://www.thecocktaildb.com/images/media/drink/7p607y1504735343.jpg" id="RandomDrinkImg" class="border-8 border-rose-500" />
+            <!--3 containers for drink and food, and promotion in middle!-->
+            <div class="left">
+                <h2 id="DRINKME" class="text-6xl text-orange-400 border-b-2 border-rose-100">
+                    Featured Drink:
+                </h2>
+                <span id="featuredDrinkTitle" class="text-rose-100 text-6xl mb-12"></span>
+                <div class="drink-pic">
+                    <img src="https://www.thecocktaildb.com/images/media/drink/7p607y1504735343.jpg" id="RandomDrinkImg" class="border-8 border-rose-500" />
+                </div>
+                <div class="drink-content-container">
+                    <details>
+                        <summary class="text-rose-100 text-3xl">Ingredients</summary>
+                        <p id="drinkIngredients" class="text-2xl text-rose-100"></p>
+                    </details>
+                    <details>
+                        <summary class="text-rose-100 text-3xl mt-8">How to Make:</summary>
+                        <p id="drinkInstructions" class="text-2xl text-rose-100"></p>
+                    </details>
+                </div>
             </div>
-            <div class="drink-content-container">
-                <details>
-                    <summary class="text-rose-100 text-3xl">Ingredients</summary>
-                    <p id="drinkIngredients" class="text-2xl text-rose-100"></p>
-                </details>
-                <details>
-                    <summary class="text-rose-100 text-3xl mt-8">How to Make:</summary>
-                    <p id="drinkInstructions" class="text-2xl text-rose-100"></p>
-                </details>
+
+            <div class="center">
+                <div class="mid-content">
+                    <p style="color:White">Try</p>
+                    <p style="color:White">This</p>
+                    <p style="color:White">Combination!!</p>
+                </div>
+            </div>
+
+            <!--food-->
+            <div class="right">
+                <h2 class="text-6xl text-orange-400  border-b-2 border-rose-100">
+                    Featured Meal:
+                </h2>
+                <span class="text-rose-100 text-6xl mb-12" id="featuredMealTitle"></span>
+                <div class="meal-pic-container">
+                    <img src="https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg" id="RandomMealImg" class="border-8 border-black" />
+                </div>
+                <div class="meal-content-container">
+                    <details>
+                        <summary class="text-rose-100 text-3xl">Ingredients</summary>
+                        <p id="mealIngredients" class="text-2xl text-rose-100"></p>
+                    </details>
+                    <details>
+                        <summary class="text-rose-100 text-3xl mt-8">How to Make:</summary>
+                        <p id="mealInstructions" class="text-2xl text-rose-100"></p>
+                    </details>
+                </div>
             </div>
         </div>
 
-        <div class="center">
-            <div class="mid-content">
-                <p style="color:White">Try</p>
-                <p style="color:White">This</p>
-                <p style="color:White">Combination!!</p>
-            </div>
-        </div>
-
-        <!--food-->
-        <div class="right">
-            <h2 class="text-6xl text-orange-400  border-b-2 border-rose-100">
-                Featured Meal:
-            </h2>
-            <span class="text-rose-100 text-6xl mb-12" id="featuredMealTitle"></span>
-            <div class="meal-pic-container">
-                <img src="https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg" id="RandomMealImg" class="border-8 border-black" />
-            </div>
-            <div class="meal-content-container">
-                <details>
-                    <summary class="text-rose-100 text-3xl">Ingredients</summary>
-                    <p id="mealIngredients" class="text-2xl text-rose-100"></p>
-                </details>
-                <details>
-                    <summary class="text-rose-100 text-3xl mt-8">How to Make:</summary>
-                    <p id="mealInstructions" class="text-2xl text-rose-100"></p>
-                </details>
-            </div>
-        </div>
-        </div>
-
-    <!--test-->
+        <!--test-->
 
         <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
-        <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        </div>
-        <div class="carousel-inner relative w-full overflow-hidden">
-            <div class="carousel-item active float-left w-full">
-                <img src="./assets/images/cocktails-food5.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
+            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
-            <div class="carousel-item float-left w-full">
-                <img src="./assets/images/cocktails-food.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
+            <div class="carousel-inner relative w-full overflow-hidden">
+                <div class="carousel-item active float-left w-full">
+                    <img src="./assets/images/cocktails-food5.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
+                </div>
+                <div class="carousel-item float-left w-full">
+                    <img src="./assets/images/cocktails-food.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
+                </div>
+                <div class="carousel-item float-left w-full">
+                    <img src="./assets/images/cocktails-food6.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
+                </div>
+                <div class="carousel-item float-left w-full">
+                    <img src="./assets/images/cocktails-food3.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
+                </div>
+                <div class="carousel-item float-left w-full">
+                    <img src="./assets/images/cocktails-food2.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
+                </div>
             </div>
-            <div class="carousel-item float-left w-full">
-                <img src="./assets/images/cocktails-food6.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
-            </div>
-            <div class="carousel-item float-left w-full">
-                <img src="./assets/images/cocktails-food3.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
-            </div>
-            <div class="carousel-item float-left w-full">
-                <img src="./assets/images/cocktails-food2.jpg" width=150px height=50px class="block w-full" alt="Cocktails with food" />
-            </div>
-        </div>
-        <button class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
+            <button class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
     <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                     </button>
-        <button class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
+            <button class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
     <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -171,16 +171,16 @@
 
     <!-- display this when user not old enough -->
     <div class="youngAge bg-rose-200" id="youngAge" style="display: none; ">
-        <h2>Our website provides access to alcohol related information. According to the law you need to be over the age of 
+        <h2>Our website provides access to alcohol related information. According to the law you need to be over the age of
             <span style="font-weight: 700; border-bottom: 3px solid red; color: red; ">
                 21
             </span> to view this content.</h2>
-        <img  id = "youngAgeLogo"src="./assets/images/InLogo.png" alt="" style="width: 75vw; height: 72vh; border-radius: 30px; align-self: center;" >
+        <img id="youngAgeLogo" src="./assets/images/InLogo.png" alt="" style="width: 75vw; height: 72vh; border-radius: 30px; align-self: center;">
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-   
+
     <script src="./assets/js/script.js"></script>
 
 </body>
