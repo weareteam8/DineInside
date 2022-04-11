@@ -33,12 +33,13 @@ var drinkingAgeRegulation = function () {
   console.log(localStorage.getItem("userAge"));
   console.log(JSON.parse(localStorage.getItem("userAge")));
   if (JSON.parse(localStorage.getItem("userAge")) < 21) {
-    mainPageEl.setAttribute("style", "display:none;");
+    mainPageEl.style.display = "none";
+    drinksList.style.display = "none";
+    document.getElementById("searchBar").style.display = "none";
     youngAgeEl.setAttribute("style", "display:block;");
-    drinksList.setAttribute("style", "display:none;");
-    document.getElementById("searchBar").setAttribute("style", "display:none;");
   } else {
     mainPageEl.setAttribute("style", "display:block");
+    youngAgeEl.setAttribute("style", "display:none");
 
     var getCockTails = function () {
       const cockTails = {

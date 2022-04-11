@@ -83,7 +83,22 @@
 </header>
 
 <body>
-    <div class="main-page" id="main-page" style="display: none;">
+    <div class="main-page" id="main-page"">
+        <h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
 
 
         <div class="body-container">
@@ -193,7 +208,7 @@
     </div>
 
     <!-- display this when user not old enough -->
-    <div class="youngAge bg-rose-200" id="youngAge" style="display: none; ">
+    <div class="youngAge bg-rose-200" id="youngAge"  ">
         <h2>Our website provides access to alcohol related information. According to the law you need to be over the age
             of
             <span style="font-weight: 700; border-bottom: 3px solid red; color: red; ">
@@ -208,6 +223,34 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
     <script src="./assets/js/script.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+        
 
 </body>
 <!-- Footer -->
