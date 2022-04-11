@@ -23,7 +23,6 @@ var mainPageEl = document.getElementById("main-page");
 var youngAgeEl = document.getElementById("youngAge");
 var searchSubmitBtn = document.getElementById("searchSubmit");
 
-<<<<<<< HEAD
 var drinkingAgeRegulation = function () {
   window.alert(
     "Hello! Welcome to DineIn! You must be of drinking age to enter! "
@@ -42,25 +41,6 @@ var drinkingAgeRegulation = function () {
     youngAgeEl.setAttribute("style", "display:hidden;");
     mainPageEl.setAttribute("style", "display:block");
     youngAgeEl.setAttribute("style", "display:none");
-=======
-var drinkingAgeRegulation = function() {
-    window.alert(
-        "Hello! Welcome to DineIn! You must be of drinking age to enter! "
-    );
-    var date = window.prompt("Please enter you age!");
-    // console.log(date);
-    localStorage.setItem("userAge", JSON.stringify(date));
-    console.log(localStorage.getItem("userAge"));
-    console.log(JSON.parse(localStorage.getItem("userAge")));
-    if (JSON.parse(localStorage.getItem("userAge")) < 21) {
-        mainPageEl.setAttribute("style", "display:none;");
-        youngAgeEl.setAttribute("style", "display:block;");
-        drinksList.setAttribute("style", "display:none;");
-        document.getElementById("searchBar").setAttribute("style", "display:none;");
-    } else {
-        youngAgeEl.setAttribute("style", "display:hidden;");
-        mainPageEl.setAttribute("style", "display:block");
->>>>>>> 7536de5fd5427cd3d9d555c3834c856f2c8c016a
 
         var getCockTails = function() {
             const cockTails = {
