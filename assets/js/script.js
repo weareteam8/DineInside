@@ -147,12 +147,14 @@ drinksList.addEventListener("click", function (event) {
       .then((response) => response.json())
       .then(function (data) {
         //get random drink from 0-99 (100 drinks found in VODKA category)
-        var randomDrinkNum = Math.floor(Math.random() * data.length);
-        // console.log(randomDrinkNum);
+
+        var randomDrinkNum = Math.floor(Math.random() * data.drinks.length);
+
+        console.log(randomDrinkNum);
 
         var listOfDrinks = data.drinks;
-        // console.log(listOfDrinks);
-        // console.log(listOfDrinks[randomDrinkNum].idDrink);
+        console.log(listOfDrinks);
+        console.log(listOfDrinks[randomDrinkNum].idDrink);
 
         return listOfDrinks[randomDrinkNum].idDrink;
       })
@@ -224,7 +226,7 @@ drinksList.addEventListener("click", function (event) {
       .then(function (data) {
         //get random drink from 0-106 (106 drinks found in GIN category)
 
-        var randomDrinkNum = Math.floor(Math.random() * data.length);
+        var randomDrinkNum = Math.floor(Math.random() * data.drinks.length);
         // console.log(randomDrinkNum);
 
         var listOfDrinks = data.drinks;
@@ -301,7 +303,7 @@ drinksList.addEventListener("click", function (event) {
       .then((response) => response.json())
       .then(function (data) {
         //get random drink from 0-25 (26 drinks found in RUM category)
-        var randomDrinkNum = Math.floor(Math.random() * data.length);
+        var randomDrinkNum = Math.floor(Math.random() * data.drinks.length);
         // console.log(randomDrinkNum);
 
         var listOfDrinks = data.drinks;
@@ -378,7 +380,7 @@ drinksList.addEventListener("click", function (event) {
       .then((response) => response.json())
       .then(function (data) {
         //get random drink from 0-29 (30 drinks found in TEQUILA category)
-        var randomDrinkNum = Math.floor(Math.random() * data.length);
+        var randomDrinkNum = Math.floor(Math.random() * data.drinks.length);
         // console.log(randomDrinkNum);
 
         var listOfDrinks = data.drinks;
@@ -456,7 +458,7 @@ drinksList.addEventListener("click", function (event) {
       .then(function (data) {
         // console.log(data.drinks);
         // non alcoholic drinks have 58 drinks, get a random drink from all 58
-        var randomDrinkNum = Math.floor(Math.random() * data.length);
+        var randomDrinkNum = Math.floor(Math.random() * data.drinks.length);
         var listOfDrinks = data.drinks;
         return listOfDrinks[randomDrinkNum].idDrink;
       })
