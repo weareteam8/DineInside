@@ -1,6 +1,6 @@
 # dineÎNside 
 > Interactive Front-End Project,
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [_here_](https://weareteam8.github.io/DineInside/). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [Purpose](#purpose)
@@ -85,23 +85,26 @@ THEN I can have them saved as future preferences (localstorage)
 ## Project Status
 Project is:  _complete_
 
+## Screenshot
+![dineÎNside](https://user-images.githubusercontent.com/102684089/162635839-a049167e-2480-4f29-9a7c-d2b4cf5cc766.png)
 
-## Room for Improvement
+## Links
+- [Github](https://github.com/weareteam8/DineInside)
+- [dineÎNside](https://weareteam8.github.io/DineInside/)
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
 
-To do:
-- Feature to be added 1
-- Feature to be added 2
+## Directions for Future Development
+- add a more interactive user experience where they are proposed potential meals depending on their drink selection rather than the meal pairing being random. This would be to promote a better food and drink pairing that users might better enjoy with their drink. 
+
+- hone in on user’s locations to present them with their nearest liquor store/grocery store to make the experience from web to store and mixing linear and less complicated. The more we can do for our users, the less they can worry about the preparation and focus on relaxing and enjoying our suggested drink and meal combo.
+
 
 
 ## Contribution
 Made with ❤️ by
 - George Saad
-- Nathan Boulianne
+- Jinhan Yang
 - Anika McLean
+- Nathan Boulianne
 - Ore Banjoko
-- Jin KY
 

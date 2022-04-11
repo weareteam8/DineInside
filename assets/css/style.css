@@ -20,6 +20,7 @@ body {
   padding: 0;
   background-color: lightskyblue;
 }
+
 .main-page {
   display: hidden;
 }
@@ -111,9 +112,23 @@ body {
 }
 
 .mid-content {
-  font-size: 300%;
+  font-size: 200%;
   background-color: transparent;
-  margin-top: 8cm;
+  margin-top: 6cm;
+}
+
+.meal-content-container {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: flex-start;
+}
+
+.drink-content-container {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: flex-start;
 }
 
 /*footer*/
@@ -126,12 +141,14 @@ footer {
   font-size: 18px;
   font-style: normal;
 }
+
 .youngAge {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .youngAge h2 {
   font-size: 40px;
   margin: 75px 200px;
