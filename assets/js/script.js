@@ -21,7 +21,11 @@ var mealInstructionsEl = document.getElementById("mealInstructions");
 var drinkInstructionsEl = document.getElementById("drinkInstructions");
 var mainPageEl = document.getElementById("main-page");
 var youngAgeEl = document.getElementById("youngAge");
+var navBarWrapperEl = document.getElementById("NavBarWrapper");
+
 var searchSubmitBtn = document.getElementById("searchSubmit");
+var modalBox = document.getElementById("modalBox");
+var submitAgeCheckBtn = document.getElementById("submitAgeCheck");
 
 // var drinkingAgeRegulation = function () {
 //   window.alert(
@@ -38,7 +42,6 @@ var searchSubmitBtn = document.getElementById("searchSubmit");
 //   drinksList.setAttribute("style", "display:none;");
 //   document.getElementById("searchBar").setAttribute("style", "display:none;");
 // } else {
-mainPageEl.setAttribute("style", "display:block");
 
 var getCockTails = function () {
   const cockTails = {
@@ -80,9 +83,6 @@ var getCockTails = function () {
     .catch((err) => console.error(err + "Error with Drinks"));
 };
 getCockTails();
-// //API CALL 2 YUMLY
-
-// // API CALL 3 TheMealDB
 
 var getMeals = function () {
   const randomMealFetch = {
@@ -126,7 +126,6 @@ var getMeals = function () {
     );
 };
 getMeals();
-//functions
 
 drinksList.addEventListener("click", function (event) {
   if (event.target && event.target.innerHTML === "Vodka") {
@@ -701,6 +700,44 @@ searchSubmitBtn.addEventListener("click", function (event) {
 
     // use Drink ID for another fetch call --> get full information from the drink ID look up (ingredients, instructions etc....)
     .catch((err) => console.error(err));
+});
+
+submitAgeCheckBtn.addEventListener("click", function (event) {
+  var userBirthdayValue = this.previousElementSibling.value;
+  console.log(userBirthdayValue);
+  var userBirthday = new Date(userBirthdayValue);
+
+  var todayDate = Date.now();
+  console.log(todayDate);
+
+  var checkAge = todayDate - userBirthday.getTime();
+
+  console.log(checkAge);
+
+  var ageDate = new Date(checkAge);
+  var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+  console.log(age);
+  if (age >= 21) {
+    console.log("ENTER");
+    navBarWrapperEl.setAttribute("style", "display:block");
+    mainPageEl.setAttribute("style", "display:block;");
+
+    modalBox.setAttribute("style", "display:none;");
+
+    //footer display
+    document
+      .getElementById("footerSection")
+      .setAttribute("style", "display:block");
+  } else {
+    console.log("DO NOT ENTER");
+    modalBox.setAttribute("style", "display: none;");
+    youngAgeEl.setAttribute("style", "display:block;");
+
+    //footer display
+    document
+      .getElementById("footerSection")
+      .setAttribute("style", "display:block");
+  }
 });
 
 // }
