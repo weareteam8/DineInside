@@ -1,139 +1,158 @@
 * {
-  display: flexbox;
+    display: flexbox;
 }
 
 :root {
-  --muskyBlue: #08243b;
-  --muskyTeal: #56777c;
-  --muskyTan: #f2c999;
-  --muskyOrange: #c79360;
-  --muskyBrown: #75574e;
-  --mealContainer: #302e2b;
-  --footer: #87cefa;
-  --highlight: #ee82ee;
-  --onClick: hsl(271, 76%, 53%);
+    --muskyBlue: #08243b;
+    --muskyTeal: #56777c;
+    --muskyTan: #f2c999;
+    --muskyOrange: #c79360;
+    --muskyBrown: #75574e;
+    --mealContainer: #302e2b;
+    --footer: #87cefa;
+    --highlight: #ee82ee;
+    --onClick: hsl(271, 76%, 53%);
 }
 
 body {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  background-color: lightskyblue;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
 }
+
 .main-page {
-  display: hidden;
+    display: hidden;
 }
 
 .body-container {
-  display: flex;
-  background-image: url(../images/barkbackground\ 1.jpg);
-  height: 70vh;
-  width: 100%;
+    display: flex;
+    background-image: url(../images/barkbackground\ 1.jpg);
+    height: 70vh;
+    width: 100%;
 }
 
 .wrapper {
-  height: 100px;
+    height: 100px;
 }
+
 
 /*more dynamic button behavior*/
 
 .btn:hover {
-  background-color: var(--highlight);
-  border-radius: 11%;
-  padding: 4%;
+    background-color: var(--highlight);
+    border-radius: 11%;
+    padding: 4%;
 }
 
 .btn:active {
-  background-color: var(--onClick);
-  border-radius: 11%;
-  padding: 0%;
+    background-color: var(--onClick);
+    border-radius: 11%;
+    padding: 0%;
 }
 
 .logotitle {
-  font-size: 200%;
+    font-size: 200%;
 }
 
 .InLogo {
-  float: left;
-  left: 16%;
-  width: 10em;
-  height: 5em;
-  border-radius: 30px;
+    float: left;
+    left: 16%;
+    width: 10em;
+    height: 5em;
+    border-radius: 30px;
 }
+
 
 /*content containers*/
 
 .left {
-  align-items: left;
-  float: left;
-  height: 100%;
-  width: auto;
-  background-color: transparent;
+    align-items: left;
+    float: left;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
 }
 
 .right {
-  align-items: right;
-  float: left;
-  height: 100%;
-  width: auto;
-  background-color: transparent;
+    align-items: right;
+    float: left;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
 }
 
 .center {
-  text-align: center;
-  background-color: transparent;
-  height: 100%;
-  width: 300px;
-  margin: 0 300px;
+    text-align: center;
+    background-color: transparent;
+    height: 100%;
+    width: 300px;
+    margin: 0 300px;
 }
 
 .featuredDrinkTitle {
-  font-size: 110%;
-  font-style: italic;
-  margin-left: 12cm;
+    font-size: 110%;
+    font-style: italic;
+    margin-left: 12cm;
 }
 
 .featuredMealTitle {
-  padding-left: 10cm;
-  font-size: 110%;
-  font-style: italic;
-  margin-left: 12cm;
+    padding-left: 10cm;
+    font-size: 110%;
+    font-style: italic;
+    margin-left: 12cm;
 }
 
 .drink-pic {
-  float: right;
-  height: 100%;
+    float: right;
+    height: 100%;
 }
 
 .meal-pic-container {
-  float: left;
-  height: 100%;
+    float: left;
+    height: 100%;
 }
 
 .mid-content {
-  font-size: 200%;
-  background-color: transparent;
-  margin-top: 6cm;
+    font-size: 300%;
+    background-color: transparent;
+    margin-top: 8cm;
 }
+
+.meal-content-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: flex-start;
+}
+
+.drink-content-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: flex-start;
+}
+
 
 /*footer*/
 
 footer {
-  float: inline-end;
-  margin-top: auto;
-  background-color: var(--highlight);
-  color: var(--mealContainer);
-  font-size: 18px;
-  font-style: normal;
+    float: inline-end;
+    margin-top: auto;
+    background-color: var(--highlight);
+    color: var(--mealContainer);
+    font-size: 18px;
+    font-style: normal;
 }
 
 .youngAge {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 .youngAge h2 {
-  font-size: 40px;
-  margin: 75px 200px;
+    font-size: 40px;
+    margin: 75px 200px;
 }
