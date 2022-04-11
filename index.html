@@ -81,6 +81,20 @@
 </header>
 
 <body>
+ 
+<!-- The Modal -->
+<!-- <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content flex flex-col items-center">
+    
+    <p >Hello! Welcome to DineIn! You must be of drinking age to enter!</p>
+    <p >Please enter your birthday to verify if you are of age to access alcohol related content</p>
+    <input type="date" >
+    <button>Submit</button>
+  </div>
+
+</div> 
     <div class="main-page" id="main-page" style="display: none;">
 
 
@@ -190,17 +204,12 @@
 
     <script src="./assets/js/script.js"></script>
     <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
         
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
         
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        
         
         // When the user clicks the button, open the modal 
-        btn.onclick = function() {
+        window.onload = function() {
           modal.style.display = "block";
         }
         
@@ -210,7 +219,7 @@
         }
         
         // When the user clicks anywhere outside of the modal, close it
-        window.onload = function(event) {
+        window.onclick = function(event) {
           if (event.target == modal) {
             modal.style.display = "none";
           }
